@@ -1,4 +1,3 @@
-# 1. Employee Table
 
 ### Employee
 
@@ -32,6 +31,7 @@
 | 50     | Marketing | Delhi     |
 
 
+
 ---
 
 # 3. Customer Table
@@ -59,3 +59,149 @@
 | 1003    | 2          | 5000   | 2025-01-10 |
 | 1004    | 4          | 4200   | 2025-01-15 |
 
+
+---
+
+# 5. Product Table
+
+### Product
+
+| ProductID | ProductName | Category    | Price |
+| --------- | ----------- | ----------- | ----- |
+| 1         | Laptop      | Electronics | 60000 |
+| 2         | Mouse       | Electronics | 800   |
+| 3         | Chair       | Furniture   | 5000  |
+| 4         | Desk        | Furniture   | 12000 |
+| 5         | Keyboard    | Electronics | 1500  |
+
+---
+
+# 6. Sales Table
+
+### Sales
+
+| SaleID | ProductID | SaleDate   | Amount |
+| ------ | --------- | ---------- | ------ |
+| 1      | 1         | 2025-01-01 | 1000   |
+| 2      | 1         | 2025-01-02 | 1500   |
+| 3      | 2         | 2025-01-03 | 1200   |
+| 4      | 3         | 2025-01-04 | 2000   |
+| 5      | 2         | 2025-01-05 | 1800   |
+| 6      | 1         | 2025-01-06 | 2200   |
+
+---
+
+# 7. Student Table
+
+### Student
+
+| StudentID | Name  | Email                                     |
+| --------- | ----- | ----------------------------------------- |
+| 1         | Ravi  | [ravi@gmail.com](mailto:ravi@gmail.com)   |
+| 2         | Asha  | [asha@gmail.com](mailto:asha@gmail.com)   |
+| 3         | Raj   | [raj@gmail.com](mailto:raj@gmail.com)     |
+| 4         | Anil  | [ravi@gmail.com](mailto:ravi@gmail.com)   |
+| 5         | Meena | [asha@gmail.com](mailto:asha@gmail.com)   |
+| 6         | Kiran | [kiran@gmail.com](mailto:kiran@gmail.com) |
+
+Perfect duplicate example.
+
+---
+
+# 8. Attendance Table
+
+### Attendance
+
+| EmpID | AttendanceDate |
+| ----- | -------------- |
+| 101   | 2025-01-01     |
+| 101   | 2025-01-02     |
+| 101   | 2025-01-03     |
+| 101   | 2025-01-05     |
+| 102   | 2025-01-01     |
+| 102   | 2025-01-03     |
+| 102   | 2025-01-04     |
+
+---
+
+# Tables for Set Operations
+
+### A
+
+| ID |
+| -- |
+| 1  |
+| 2  |
+| 3  |
+| 4  |
+
+### B
+
+| ID |
+| -- |
+| 3  |
+| 4  |
+| 5  |
+| 6  |
+
+Use these to demonstrate:
+
+```sql
+UNION
+```
+
+Result
+
+```
+1
+2
+3
+4
+5
+6
+```
+
+---
+
+```sql
+UNION ALL
+```
+
+Result
+
+```
+1
+2
+3
+4
+3
+4
+5
+6
+```
+
+---
+
+```sql
+INTERSECT
+```
+
+Result
+
+```
+3
+4
+```
+
+---
+
+```sql
+EXCEPT
+```
+
+Result
+
+```
+1
+2
+```
